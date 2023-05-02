@@ -4,6 +4,7 @@ import Paragraph from "../components/text/paragraph";
 import Button from "../components/button/Button";
 import { Video, ResizeMode } from 'expo-av';
 import * as React from 'react';
+import { Link } from "expo-router";
 
 
 
@@ -32,8 +33,8 @@ const Welcome = () => {
       </View>
 
       <View style={{ gap: 15, width: "100%" }}>
-        <Button>Create a new account</Button>
-        <Button gray>I already have one</Button>
+        <Button link="/pages/register">Create a new account</Button>
+        <Button link="/pages/login" gray>I already have one</Button>
       </View>
     </View>
   );

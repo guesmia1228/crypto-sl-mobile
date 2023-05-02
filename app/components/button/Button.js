@@ -1,10 +1,27 @@
+import { Link } from "expo-router";
 import { StyleSheet, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Button = ({ children, gray, style }) => {
+const Button = ({ children, gray, style, link, onPress }) => {
+  if (link) {
+    return (
+      <Link href={link} asChild>
+        <TouchableOpacity 
+          style={{
+            ...styles.button,
+            backgroundColor: gray ? "#333333" : "#1595C2",
+            ...style,
+          }}
+        >
+          <Text style={{ ...styles.buttonText }}>{children}</Text>
+        </TouchableOpacity>
+      </Link>
+    );
+  }
+
   return (
-    <TouchableOpacity
-      style={{
+    <TouchableOpacity onPress={onPress}
+    style={{
         ...styles.button,
         backgroundColor: gray ? "#333333" : "#1595C2",
         ...style,

@@ -1,7 +1,7 @@
-import { View } from "@bacons/react-views";
 import SmallText from "../text/smallText";
-import { Image, Pressable } from "react-native";
+import { Image, Pressable, View } from "react-native";
 import { useState } from "react";
+import { Link } from "expo-router";
 
 const nav = [
   {
@@ -52,28 +52,30 @@ const Navigation = () => {
       }}
     >
       {nav.map((item, index) => (
+        <Link href={`/pages/${item.text.toLowerCase()}`} key={item.text} >
         <Pressable
-          style={{ alignItems: "center" }}
-          onPress={() => setActive(index)}
-        >
-          <Image
-            source={active === index ? item.active : item.icon}
-            style={{
-              height: 20,
-              aspectRatio: 1,
-              marginBottom: 5,
-            }}
-            resizeMode="contain"
-          />
-          <SmallText
-            style={{
-              textAlign: "center",
-              opacity: active === index ? "1" : "0.6",
-            }}
+            style={{ alignItems: "center" }}
+            onPress={() => setActive(index)}
           >
-            {item.text}
-          </SmallText>
-        </Pressable>
+            <Image
+              source={active === index ? item.active : item.icon}
+              style={{
+                height: 20,
+                aspectRatio: 1,
+                marginBottom: 5,
+              }}
+              resizeMode="contain"
+            />
+            <SmallText
+              style={{
+                textAlign: "center",
+                opacity: active === index ? "1" : "0.6",
+              }}
+            >
+              {item.text}
+            </SmallText>
+          </Pressable>
+        </Link>
       ))}
     </View>
   );
