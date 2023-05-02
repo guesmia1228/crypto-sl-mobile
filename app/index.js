@@ -20,8 +20,7 @@ import AddEmployee from "./pages/addEmployee";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <AddEmployee />
-      <Navigation />
+      <Welcome />
     </View>
   );
 }
