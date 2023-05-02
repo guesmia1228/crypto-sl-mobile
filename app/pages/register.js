@@ -39,6 +39,10 @@ const contentData = [
 
 export default function Register() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const buttonPressHandler = () => {
+    setActiveIndex(activeIndex + 1);
+    console.log("test")
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -74,7 +78,7 @@ export default function Register() {
       <View style={{ flex: 1 }}>
         {contentData.map((item, index) => (
           <>
-            {activeIndex === index && (
+            {activeIndex === index && index !== 2 && (
               <Content
                 key={index}
                 title={item.title}
@@ -82,16 +86,29 @@ export default function Register() {
                 text={item.text}
                 input1={item.input1}
                 input2={item.input2}
+                buttonPressHandler={buttonPressHandler}
+              />
+            )}
+
+            {activeIndex === index && index === 2 && (
+              <Content
+                key={index}
+                title={item.title}
+                buttonText={item.button}
+                text={item.text}
+                input1={item.input1}
+                input2={item.input2}
+                link="/pages/home"
               />
             )}
           </>
         ))}
       </View>
-    </View>
+    </View >
   );
 }
 
-const Content = ({ title, buttonText, text, input1, input2 }) => {
+const Content = ({ title, buttonText, text, input1, input2, buttonPressHandler, link }) => {
   return (
     <View
       style={{
@@ -121,7 +138,7 @@ const Content = ({ title, buttonText, text, input1, input2 }) => {
         </View>
       </View>
 
-      <Button>{buttonText}</Button>
+      <Button link={link} onPress={buttonPressHandler}>{buttonText}</Button>
     </View>
   );
 };
