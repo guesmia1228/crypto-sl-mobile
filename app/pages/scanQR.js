@@ -5,7 +5,7 @@ import Paragraph from "../components/text/paragraph";
 
 const ScanQR = () => {
   return (
-    <View style={{ flex: 1, position: "relative" }}>
+    <View style={{ flex: 1, position: "relative", backgroundColor: "#1F1F1F" }}>
       <Header></Header>
 
       <View

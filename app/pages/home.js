@@ -31,160 +31,164 @@ const icons = [
 
 const Home = () => {
   return (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1, paddingBottom: 100 }}
-      showsVerticalScrollIndicator={false}
-    >
-      <View style={{ flex: 1, marginTop: 50 }}>
-        <View style={{ marginHorizontal: 30 }}>
-          <Image
-            style={{ width: 120, marginBottom: 10 }}
-            resizeMode="contain"
-            source={require("../assets/images/logo.png")}
-          />
+    <View style={{
+      backgroundColor: 'black'
+    }}>
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1, paddingBottom: 100, backgroundColor: '#000' }}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={{ flex: 1, marginTop: 50 }}>
+          <View style={{ marginHorizontal: 30 }}>
+            <Image
+              style={{ width: 120, marginBottom: 10 }}
+              resizeMode="contain"
+              source={require("../assets/images/logo.png")}
+            />
 
-          <View
-            style={{
-              borderRadius: 10,
-              backgroundColor: "#1595C2",
-              padding: 20,
-            }}
-          >
             <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
+              style={{
+                borderRadius: 10,
+                backgroundColor: "#1595C2",
+                padding: 20,
+              }}
             >
-              <MediumText>Total Wallet Balance</MediumText>
-              <MediumText>USD</MediumText>
-            </View>
+              <View
+                style={{ flexDirection: "row", justifyContent: "space-between" }}
+              >
+                <MediumText>Total Wallet Balance</MediumText>
+                <MediumText>USD</MediumText>
+              </View>
 
-            <Heading1 style={{ marginTop: 20, marginBottom: 50 }}>
-              $7,276.48
-            </Heading1>
+              <Heading1 style={{ marginTop: 20, marginBottom: 50 }}>
+                $7,276.48
+              </Heading1>
+
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <MediumText>Monthly Changes</MediumText>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    backgroundColor: "white",
+                    borderRadius: 15,
+                    paddingVertical: 8,
+                    paddingHorizontal: 10,
+                  }}
+                >
+                  <Triangle />
+                  <MediumText
+                    style={{
+                      color: "#23C215",
+                      fontWeight: 800,
+                      transform: "translateY(1px)",
+                    }}
+                  >
+                    25%
+                  </MediumText>
+                </View>
+              </View>
+            </View>
 
             <View
               style={{
                 flexDirection: "row",
                 justifyContent: "space-between",
-                alignItems: "center",
+                marginTop: 30,
+                paddingBottom: 20,
+                borderBottomWidth: 1,
+                borderBottomColor: "#333",
               }}
             >
-              <MediumText>Monthly Changes</MediumText>
-              <View
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  backgroundColor: "white",
-                  borderRadius: 15,
-                  paddingVertical: 8,
-                  paddingHorizontal: 10,
-                }}
-              >
-                <Triangle />
-                <MediumText
-                  style={{
-                    color: "#23C215",
-                    fontWeight: 800,
-                    transform: "translateY(1px)",
-                  }}
-                >
-                  25%
-                </MediumText>
-              </View>
+              {icons.map((item, index) => (
+                <IconBox key={index} image={item.image} label={item.text} />
+              ))}
             </View>
           </View>
 
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              marginTop: 30,
-              paddingBottom: 20,
-              borderBottomWidth: 1,
-              borderBottomColor: "#333",
-            }}
-          >
-            {icons.map((item, index) => (
-              <IconBox key={index} image={item.image} label={item.text} />
-            ))}
+          <View>
+            <SectionHeader title="Stats">
+              <MediumText style={{ color: "#1595C2" }}>
+                Change to Affiliate
+              </MediumText>
+            </SectionHeader>
+            <FlatList
+              horizontal
+              data={[0, 1, 2, 3]}
+              renderItem={() => <StatsBox />}
+              keyExtractor={(item) => item.toString()}
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ marginLeft: 30 }}
+            />
+          </View>
+
+          <View>
+            <SectionHeader title="Recent" />
+
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
+            <ItemLayout
+              image={require("../assets/images/avatar.jpg")}
+              main="Ruth Sharp"
+              info="Receive"
+              data="$400"
+            />
           </View>
         </View>
-
-        <View>
-          <SectionHeader title="Stats">
-            <MediumText style={{ color: "#1595C2" }}>
-              Change to Affiliate
-            </MediumText>
-          </SectionHeader>
-          <FlatList
-            horizontal
-            data={[0, 1, 2, 3]}
-            renderItem={() => <StatsBox />}
-            keyExtractor={(item) => item.toString()}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ marginLeft: 30 }}
-          />
-        </View>
-
-        <View>
-          <SectionHeader title="Recent" />
-
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-          <ItemLayout
-            image={require("../assets/images/avatar.jpg")}
-            main="Ruth Sharp"
-            info="Receive"
-            data="$400"
-          />
-        </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 

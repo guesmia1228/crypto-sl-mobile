@@ -17,94 +17,97 @@ const recent = [
 
 const Send = () => {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-        paddingBottom: 100,
-      }}
-      showsVerticalScrollIndicator={false}
-    >
-      <Header>
-        <Heading2>Send</Heading2>
-      </Header>
-
-      <View style={{ paddingHorizontal: 30, paddingTop: 30 }}>
-        <Input
-          style={{ marginBottom: 0 }}
-          placeholder={"Search receiver"}
-          search
-          qr
-        />
-      </View>
-
-      <SectionHeader title="Recent" />
-
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          paddingHorizontal: 30,
+    <View style={{backgroundColor: "#1F1F1F"}}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingBottom: 100,
+          backgroundColor: "#1F1F1F",
         }}
+        showsVerticalScrollIndicator={false}
       >
-        {recent.map((item) => (
-          <Image
-            source={item}
-            style={{ height: 50, width: 50, borderRadius: "50%" }}
+        <Header>
+          <Heading2>Send</Heading2>
+        </Header>
+
+        <View style={{ paddingHorizontal: 30, paddingTop: 30 }}>
+          <Input
+            style={{ marginBottom: 0 }}
+            placeholder={"Search receiver"}
+            search
+            qr
           />
-        ))}
-      </View>
+        </View>
 
-      <SectionHeader title="Contacts" />
+        <SectionHeader title="Recent" />
 
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="ruth.sharp99@gmail.com"
-        data="enter"
-      />
-    </ScrollView>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingHorizontal: 30,
+          }}
+        >
+          {recent.map((item) => (
+            <Image
+              source={item}
+              style={{ height: 50, width: 50, borderRadius: "50%" }}
+            />
+          ))}
+        </View>
+
+        <SectionHeader title="Contacts" />
+
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="ruth.sharp99@gmail.com"
+          data="enter"
+        />
+      </ScrollView>
+    </View>
   );
 };
 

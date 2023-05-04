@@ -87,6 +87,7 @@ export default Login;
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    backgroundColor: "#1F1F1F",
   },
 
   image: {

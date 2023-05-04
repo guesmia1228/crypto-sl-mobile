@@ -43,7 +43,7 @@ const Secure = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#1F1F1F" }}>
       <Header>
         <Heading2>Secure</Heading2>
       </Header>

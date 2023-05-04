@@ -17,94 +17,97 @@ const recent = [
 
 const Transactions = () => {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-        paddingBottom: 100,
-      }}
-      showsVerticalScrollIndicator={false}
-    >
-      <Header>
-        <Heading2>Transactions</Heading2>
-      </Header>
+    <View style={{backgroundColor: "#1F1F1F"}}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingBottom: 100,
+          backgroundColor: "#1F1F1F"
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+        <Header>
+          <Heading2>Transactions</Heading2>
+        </Header>
 
-      <View style={{ paddingHorizontal: 30, paddingTop: 30 }}>
-        <Input
-          style={{ marginBottom: 0 }}
-          placeholder={"Search receiver"}
-          search
+        <View style={{ paddingHorizontal: 30, paddingTop: 30 }}>
+          <Input
+            style={{ marginBottom: 0 }}
+            placeholder={"Search receiver"}
+            search
+          />
+        </View>
+
+        <SectionHeader title="Today" />
+
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
         />
-      </View>
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
 
-      <SectionHeader title="Today" />
+        <SectionHeader style={{ marginTop: 0 }} title="Yesterday" />
 
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
 
-      <SectionHeader style={{ marginTop: 0 }} title="Yesterday" />
+        <SectionHeader style={{ marginTop: 0 }} title="This Week" />
 
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-
-      <SectionHeader style={{ marginTop: 0 }} title="This Week" />
-
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-      <ItemLayout
-        image={require("../assets/images/avatar.jpg")}
-        main="Ruth Sharp"
-        info="20 Mar, 08:25 AM"
-        data="-$1,592.00"
-      />
-    </ScrollView>
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+        <ItemLayout
+          image={require("../assets/images/avatar.jpg")}
+          main="Ruth Sharp"
+          info="20 Mar, 08:25 AM"
+          data="-$1,592.00"
+        />
+      </ScrollView>
+    </View>
   );
 };
 

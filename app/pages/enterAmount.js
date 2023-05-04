@@ -22,7 +22,7 @@ const EnterAmount = () => {
   };
 
   return (
-    <View style={{ flex: 1, paddingBottom: 50 }}>
+    <View style={{ flex: 1, paddingBottom: 50, backgroundColor: "#1F1F1F" }}>
       <Header>
         <Heading2>Enter Amount</Heading2>
       </Header>

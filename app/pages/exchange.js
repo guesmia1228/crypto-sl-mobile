@@ -10,7 +10,7 @@ import Button from "../components/button/Button";
 
 const Exchange = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#1F1F1F", }}>
       <Header>
         <Heading2>Exchange</Heading2>
       </Header>

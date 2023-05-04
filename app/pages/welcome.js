@@ -21,6 +21,7 @@ const Welcome = () => {
         paddingBottom: 50,
         paddingTop: 100,
         paddingHorizontal: 30,
+        backgroundColor: "#1F1F1F",
       }}
     >
       <View style={styles.textWrapper}>

@@ -8,7 +8,7 @@ import Heading2 from "../components/text/heading2";
 
 const Receive = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#1F1F1F" }}>
       <Header>
         <Heading2>Receive</Heading2>
       </Header>
