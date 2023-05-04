@@ -15,19 +15,19 @@ import Exchange from "./pages/exchange";
 import Payroll from "./pages/payroll";
 import Employee from "./pages/employee";
 import AddEmployee from "./pages/addEmployee";
+import Payment from "./pages/payment";
+import Admin from "./pages/admin";
 
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-      >
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
@@ -42,8 +42,10 @@ export default function Navigator() {
         <Stack.Screen name="Transactions" component={Transactions} />
         <Stack.Screen name="Exchange" component={Exchange} />
         <Stack.Screen name="Payroll" component={Payroll} />
+        <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Employee" component={Employee} />
         <Stack.Screen name="AddEmployee" component={AddEmployee} />
+        <Stack.Screen name="Adming" component={Admin} />
       </Stack.Navigator>
     </NavigationContainer>
   );

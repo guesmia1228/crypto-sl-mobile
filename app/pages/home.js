@@ -31,11 +31,17 @@ const icons = [
 
 const Home = () => {
   return (
-    <View style={{
-      backgroundColor: 'black'
-    }}>
+    <View
+      style={{
+        backgroundColor: "black",
+      }}
+    >
       <ScrollView
-        contentContainerStyle={{ flexGrow: 1, paddingBottom: 100, backgroundColor: '#000' }}
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingBottom: 100,
+          backgroundColor: "#000",
+        }}
         showsVerticalScrollIndicator={false}
       >
         <View style={{ flex: 1, marginTop: 50 }}>
@@ -54,7 +60,10 @@ const Home = () => {
               }}
             >
               <View
-                style={{ flexDirection: "row", justifyContent: "space-between" }}
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
               >
                 <MediumText>Total Wallet Balance</MediumText>
                 <MediumText>USD</MediumText>
@@ -124,7 +133,7 @@ const Home = () => {
               renderItem={() => <StatsBox />}
               keyExtractor={(item) => item.toString()}
               showsHorizontalScrollIndicator={false}
-              contentContainerStyle={{ marginLeft: 30 }}
+              contentContainerStyle={{ marginLeft: 30, paddingRight: 50 }}
             />
           </View>
 

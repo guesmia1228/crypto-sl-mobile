@@ -12,6 +12,7 @@ const ItemLayout = ({ image, main, info, data }) => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        opacity: data === "Disabled" ? 0.6 : 1,
       }}
     >
       <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -46,7 +47,20 @@ const ItemLayout = ({ image, main, info, data }) => {
             resizeMethod="contain"
           />
         ) : (
-          <Paragraph style={{ opacity: 1, fontWeight: 600 }}>{data}</Paragraph>
+          <Paragraph
+            style={{
+              opacity: 1,
+              fontWeight: 600,
+              color:
+                data === "Enabled"
+                  ? "#B3F19B"
+                  : data === "Disabled"
+                  ? "#EF5452"
+                  : "white",
+            }}
+          >
+            {data}
+          </Paragraph>
         )}
       </View>
     </View>
