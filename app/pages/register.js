@@ -37,7 +37,7 @@ const contentData = [
   },
 ];
 
-export default function Register() {
+export default function Register({navigation}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const buttonPressHandler = () => {
     setActiveIndex(activeIndex + 1);
@@ -98,7 +98,8 @@ export default function Register() {
                 text={item.text}
                 input1={item.input1}
                 input2={item.input2}
-                link="/pages/home"
+                link="Home"
+                navigation={navigation}
               />
             )}
           </>
@@ -108,7 +109,7 @@ export default function Register() {
   );
 }
 
-const Content = ({ title, buttonText, text, input1, input2, buttonPressHandler, link }) => {
+const Content = ({ title, buttonText, text, input1, input2, buttonPressHandler, link, navigation }) => {
   return (
     <View
       style={{
@@ -138,7 +139,7 @@ const Content = ({ title, buttonText, text, input1, input2, buttonPressHandler, 
         </View>
       </View>
 
-      <Button link={link} onPress={buttonPressHandler}>{buttonText}</Button>
+      <Button link={link} navigation={navigation} onPress={buttonPressHandler}>{buttonText}</Button>
     </View>
   );
 };
