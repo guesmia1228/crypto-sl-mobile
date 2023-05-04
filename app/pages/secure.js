@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import Header from "../components/header/header";
-import Heading2 from "./../components/text/heading2";
+import Heading2 from "../components/text/heading2";
 import Paragraph from "../components/text/paragraph";
 import Button from "../components/button/Button";
 import Numpad from "../components/numpad/numpad";

@@ -3,7 +3,7 @@ import Header from "../components/header/header";
 import Heading2 from "../components/text/heading2";
 import Input from "../components/input/input";
 import { View } from "react-native";
-import Button from "./../components/button/Button";
+import Button from "../components/button/Button";
 import { ImageBackground } from "react-native";
 import { Image } from "react-native";
 

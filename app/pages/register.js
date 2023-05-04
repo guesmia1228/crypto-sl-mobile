@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, Image, Text, View, ImageBackground } from "react-native";
-import Header from "./../components/header/header";
+import Header from "../components/header/header";
 import Paragraph from "../components/text/paragraph";
-import Heading2 from "./../components/text/heading2";
+import Heading2 from "../components/text/heading2";
 import Button from "../components/button/Button";
 import Input from "../components/input/input";
 

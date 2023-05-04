@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from "react-native";
 import Register from "./pages/register";
 import Welcome from "./pages/welcome";
 import Login from "./pages/login";
@@ -17,17 +16,35 @@ import Payroll from "./pages/payroll";
 import Employee from "./pages/employee";
 import AddEmployee from "./pages/addEmployee";
 
-export default function Page() {
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
+export default function Navigator() {
   return (
-    <View style={styles.container}>
-      <Welcome/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Loading" component={Loading} />
+        <Stack.Screen name="Secure" component={Secure} />
+        <Stack.Screen name="Send" component={Send} />
+        <Stack.Screen name="ScanQR" component={ScanQR} />
+        <Stack.Screen name="EnterAmount" component={EnterAmount} />
+        <Stack.Screen name="Report" component={Report} />
+        <Stack.Screen name="Receive" component={Receive} />
+        <Stack.Screen name="Transactions" component={Transactions} />
+        <Stack.Screen name="Exchange" component={Exchange} />
+        <Stack.Screen name="Payroll" component={Payroll} />
+        <Stack.Screen name="Employee" component={Employee} />
+        <Stack.Screen name="AddEmployee" component={AddEmployee} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#1F1F1F",
-  },
-});

@@ -1,7 +1,7 @@
 import { Image, StyleSheet, View, ScrollView, FlatList } from "react-native";
-import MediumText from "./../components/text/mediumText";
+import MediumText from "../components/text/mediumText";
 import Heading1 from "../components/text/heading1";
-import SmallText from "./../components/text/smallText";
+import SmallText from "../components/text/smallText";
 import SectionHeader from "../components/sectionHeader/sectionHeader";
 import Paragraph from "../components/text/paragraph";
 import ItemLayout from "../components/itemLayout/itemLayout";

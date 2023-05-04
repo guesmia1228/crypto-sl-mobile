@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import Paragraph from "./../components/text/paragraph";
+import Paragraph from "../components/text/paragraph";
 import { Image } from "react-native";
 import MediumText from "../components/text/mediumText";
 import Header from "../components/header/header";

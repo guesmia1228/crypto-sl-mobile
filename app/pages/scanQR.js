@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import Header from "../components/header/header";
-import Heading1 from "./../components/text/heading1";
+import Heading1 from "../components/text/heading1";
 import Paragraph from "../components/text/paragraph";
 
 const ScanQR = () => {

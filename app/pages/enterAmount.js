@@ -3,8 +3,8 @@ import Header from "../components/header/header";
 import Heading2 from "../components/text/heading2";
 import Paragraph from "../components/text/paragraph";
 import { Text } from "react-native";
-import Numpad from "./../components/numpad/numpad";
-import Button from "./../components/button/Button";
+import Numpad from "../components/numpad/numpad";
+import Button from "../components/button/Button";
 import { useState } from "react";
 
 const EnterAmount = () => {

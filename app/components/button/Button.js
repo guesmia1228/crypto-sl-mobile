@@ -1,12 +1,14 @@
-import { Link } from "expo-router";
 import { StyleSheet, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Button = ({ children, gray, style, link, onPress }) => {
+const Button = ({ children, gray, style, link, onPress, navigation }) => {
   if (link) {
     return (
-      <Link href={link} asChild>
-        <TouchableOpacity 
+      // <Link href={link} asChild>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate(link)
+          }} 
           style={{
             ...styles.button,
             backgroundColor: gray ? "#333333" : "#1595C2",
@@ -15,7 +17,7 @@ const Button = ({ children, gray, style, link, onPress }) => {
         >
           <Text style={{ ...styles.buttonText }}>{children}</Text>
         </TouchableOpacity>
-      </Link>
+      // </Link>
     );
   }
 
