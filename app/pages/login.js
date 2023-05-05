@@ -5,6 +5,7 @@ import {
     Text,
     Touchable,
     View,
+    Alert
 } from "react-native";
 import Heading1 from "../components/text/heading1";
 import Paragraph from "../components/text/paragraph";
@@ -26,9 +27,15 @@ const Login = () => {
     const handleLogin = async () => {
         const result = await login(email, password, isRememberMe);
         if (result) {
-            navigation.navigate("Secure");
+            navigation.navigate("Home");
         } else {
-            // TODO: Handle error action
+            Alert.alert(
+                "Error",
+                "Login failed. Please try again.",
+                [{ text: "OK" }],
+                { cancelable: false }
+            );
+
         }
     };
 
