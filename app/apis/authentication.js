@@ -48,3 +48,21 @@ export const login = async (email, password, isRememberMe) => {
         return false; // or return some default value
     }
 };
+
+export const register = async (formData) => {
+    try {
+        const url = `${BASE_API_URL}/auth/register`;
+        const response = await axios.post(url, JSON.stringify(formData), {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (response.status === 200) {
+            return undefined;
+        } else {
+            return "Something wrong";
+        }
+    } catch (error) {
+        return error.response.data.message;
+    }
+};
