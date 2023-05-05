@@ -1,4 +1,11 @@
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import {
+    Image,
+    ImageBackground,
+    StyleSheet,
+    Text,
+    Touchable,
+    View,
+} from "react-native";
 import Heading1 from "../components/text/heading1";
 import Paragraph from "../components/text/paragraph";
 import Button from "../components/button/Button";
@@ -7,17 +14,26 @@ import Input from "../components/input/input";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { useState } from "react";
 import { login } from "../apis/authentication";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isRememberMe, setIsRememberMe] = useState(false);
+    const navigation = useNavigation();
+
     const handleLogin = async () => {
-        const result = await login(email, password);
+        const result = await login(email, password, isRememberMe);
         if (result) {
-            // TODO: Add success action
+            navigation.navigate("Secure");
         } else {
             // TODO: Handle error action
         }
+    };
+
+    const handleRememberMe = () => {
+        setIsRememberMe(!isRememberMe);
     };
 
     return (
@@ -93,20 +109,41 @@ const Login = () => {
                                     borderRadius: 3,
                                     borderColor: "rgba(255,255,255,0.2)",
                                 }}
+                                onPress={handleRememberMe}
+                                value={isRememberMe}
                             />
                         </View>
                         <Paragraph style={{ opacity: 1, color: "black" }}>
-                            Remeber me
+                            Remember me
                         </Paragraph>
                     </View>
 
                     <Button onPress={handleLogin}>Login</Button>
-                    <Paragraph style={{ marginTop: 10, textAlign: "center" }}>
-                        Don’t have account?{" "}
-                        <Text style={{ color: "#1595C2", fontWeight: 500 }}>
-                            Register
-                        </Text>
-                    </Paragraph>
+                    <View
+                        style={{
+                            marginTop: 10,
+                            justifyContent: "center",
+                            display: "flex",
+                            flexDirection: "row",
+                        }}
+                    >
+                        <Paragraph>Don’t have account? </Paragraph>
+                        <TouchableOpacity
+                            style={{ display: "inline" }}
+                            onPress={() => {
+                                navigation.navigate("Register");
+                            }}
+                        >
+                            <Text
+                                style={{
+                                    color: "#1595C2",
+                                    fontWeight: 500,
+                                }}
+                            >
+                                Register
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         </View>

@@ -2,13 +2,13 @@ import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { BASE_API_URL } from "../constants";
 
-export const login = async (email, password) => {
+export const login = async (email, password, isRememberMe) => {
     try {
         const url = `${BASE_API_URL}/auth/login`;
         const response = await axios.post(url, {
             email,
             password,
-            rememberMe: false,
+            rememberMe: isRememberMe,
         });
         if (response.status === 200) {
             const {
