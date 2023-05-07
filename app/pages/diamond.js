@@ -30,7 +30,7 @@ const stats = [
   },
 ];
 
-const Admin = () => {
+const Diamond = () => {
   return (
     <View
       style={{
@@ -46,7 +46,7 @@ const Admin = () => {
         showsVerticalScrollIndicator={false}
       >
         <Header>
-          <Heading2>Admin</Heading2>
+          <Heading2>Diamond</Heading2>
         </Header>
         <View style={{ flex: 1, marginTop: 30 }}>
           <View>
@@ -277,7 +277,7 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Diamond;
 
 const StatsBox = ({ item }) => {
   return (

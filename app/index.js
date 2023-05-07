@@ -17,17 +17,19 @@ import Employee from "./pages/employee";
 import AddEmployee from "./pages/addEmployee";
 import Payment from "./pages/payment";
 import Admin from "./pages/admin";
+import Diamond from "./pages/diamond";
 
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Gold from "./pages/gold";
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      {/* <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
@@ -45,8 +47,12 @@ export default function Navigator() {
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Employee" component={Employee} />
         <Stack.Screen name="AddEmployee" component={AddEmployee} />
-        <Stack.Screen name="Adming" component={Admin} />
-      </Stack.Navigator>
+        <Stack.Screen name="Admin" component={Admin} />
+        <Stack.Screen name="Gold" component={Gold} />
+        <Stack.Screen name="Diamond" component={Diamond} />
+      </Stack.Navigator> */}
+
+      <Home />
     </NavigationContainer>
   );
 }

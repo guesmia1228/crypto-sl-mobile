@@ -30,11 +30,12 @@ const stats = [
   },
 ];
 
-const Admin = () => {
+const Gold = () => {
   return (
     <View
       style={{
         backgroundColor: "black",
+        flex: 1,
       }}
     >
       <ScrollView
@@ -46,7 +47,7 @@ const Admin = () => {
         showsVerticalScrollIndicator={false}
       >
         <Header>
-          <Heading2>Admin</Heading2>
+          <Heading2>Gold</Heading2>
         </Header>
         <View style={{ flex: 1, marginTop: 30 }}>
           <View>
@@ -68,13 +69,19 @@ const Admin = () => {
           <View>
             <SectionHeader title="Registrations Roles" />
 
-            <View style={{ marginHorizontal: 30, flexDirection: "row" }}>
+            <View
+              style={{
+                marginHorizontal: 30,
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
               <View style={{ position: "relative", height: 160, width: 160 }}>
                 <View
                   style={{
                     height: 90,
                     width: 90,
-                    backgroundColor: "#B3F19B",
+                    backgroundColor: "#1595C2",
                     borderRadius: 50,
                     alignItems: "center",
                     justifyContent: "center",
@@ -99,22 +106,6 @@ const Admin = () => {
                   }}
                 >
                   <Paragraph style={{ opacity: 1 }}>100</Paragraph>
-                </View>
-                <View
-                  style={{
-                    height: 45,
-                    width: 45,
-                    backgroundColor: "#1595C2",
-                    borderRadius: 50,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    position: "absolute",
-                    left: 60,
-                    top: 45,
-                    zIndex: 5,
-                  }}
-                >
-                  <Paragraph style={{ opacity: 1 }}>21</Paragraph>
                 </View>
                 <View
                   style={{
@@ -191,85 +182,8 @@ const Admin = () => {
                     Affiliate
                   </Paragraph>
                 </View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <View
-                    style={{
-                      height: 10,
-                      width: 10,
-                      backgroundColor: "#B3F19B",
-                      borderRadius: 50,
-                    }}
-                  ></View>
-                  <Paragraph style={{ opacity: 1, marginLeft: 5 }}>
-                    Diamond
-                  </Paragraph>
-                </View>
               </View>
             </View>
-          </View>
-
-          <View>
-            <SectionHeader title="User Management" />
-
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Vendor"
-              data="Enabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Enabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Enabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Enabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Disabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Disabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Disabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Disabled"
-            />
-            <ItemLayout
-              image={require("../assets/images/avatar.jpg")}
-              main="Ruth Sharp"
-              info="Receive"
-              data="Disabled"
-            />
           </View>
         </View>
       </ScrollView>
@@ -277,7 +191,7 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Gold;
 
 const StatsBox = ({ item }) => {
   return (
