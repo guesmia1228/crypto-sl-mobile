@@ -23,6 +23,7 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Gold from "./pages/gold";
+import Counter from "./pages/counter";
 
 const Stack = createNativeStackNavigator();
 
@@ -52,7 +53,7 @@ export default function Navigator() {
         <Stack.Screen name="Diamond" component={Diamond} />
       </Stack.Navigator> */}
 
-      <Home />
+      <Counter />
     </NavigationContainer>
   );
 }
